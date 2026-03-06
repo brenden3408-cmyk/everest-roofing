@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --color-charcoal: #1A2332;
+  --color-gold: #C0392B;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-charcoal antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.dark-glass {
+  @apply bg-charcoal/80 backdrop-blur-lg border border-white/5;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus-visible outlines for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #C0392B;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Apex Roofing & Exteriors",
+  "description": "Premium roofing services with a focus on quality, trust, and customer satisfaction. Specializing in replacements, repairs, and storm damage claims.",
+  "requestFramePermissions": ["geolocation"]
+}
